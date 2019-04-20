@@ -4,7 +4,10 @@
   "description": "Middleware/API for Widget Rating",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "start": "node index.js",
+    "pretest": "cd .. && ./bootstrap.sh",
+    "test": "mocha ../test",
+    "posttest": "cd .. && ./cleanup.sh"
   },
   "repository": {
     "type": "git",
@@ -22,7 +25,8 @@
   },
   "homepage": "https://github.com/cmbrehm/nodejs-widget-rater#readme",
   "devDependencies": {
-    "mocha": "^6.1.3"
+    "mocha": "^6.1.3",
+    "supertest": "^4.0"
   },
   "dependencies": {
     "express": "^4.16.4",
